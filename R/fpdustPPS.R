@@ -16,7 +16,7 @@
 
 
 fpdustPPS <- function(spMat,X,n,beta){
-    if(beta < 0) stop('beta should assume a value greater or equal to 1')
+    if(beta < 0) stop('beta should assume a value greater or equal to 0')
     n <- floor(n)
     N <- length(X)
     # X <- matrix(as.logical(X),N,N)
@@ -31,11 +31,11 @@ fpdustPPS <- function(spMat,X,n,beta){
     Xt <- sum( (1-sv)*X )
 
     for(k in 2:n){
-        p <- (1-sv) * (((1-ct)*X) + (ct*beta*X))
-        p <- p / (Xt + (beta-1)*sum(X*ct))
+        p <- (1-sv) * (((1-ct)*X) + (ct*(1-beta)*X))
+        p <- p / (Xt + (beta)*sum(X*ct))
         i <- sample(1:N,1,prob=p)
         sv[i] <- TRUE
-        ct <- ct | X[i,]
+        ct <- ct | spMat[i,]
         ct <- ct * xor(ct,sv)
         Xt <- Xt - X[i]
     }
