@@ -7,18 +7,19 @@
 fpdustPPS(spMat, X, n, beta)
 }
 \arguments{
-\item{spMat}{spatial contingency matrix for population units, it should be a \code{NxN}
-matrix of 1's (adjacent units) or 0's (otherwise)}
+\item{spMat}{a matrix representing spatial contingency among population units,
+with dimension \code{NxN} and whose values are 1's (adjacent units) or 0's (otherwisex)}
 
-\item{X}{size measure vector}
+\item{X}{numeric vector with values of the size variable}
 
-\item{n}{integer representing sample size}
+\item{n}{integer scalar representing sample size}
 
 \item{beta}{a real number <1 representing a modifier of the probability of
 selection for units that are adjacent to already selected units}
 }
 \value{
-a vector indicating which units have been selected (1=selected, 0 otherwise)
+a logical vector indicating which units have been selected
+        (TRUE if selected, FALSE otherwise)
 }
 \description{
 \code{fpdustPPS} selects a sample of size n from a finite population given a spatial

@@ -3,19 +3,34 @@
 #' \code{fpdustPPS} selects a sample of size n from a finite population given a spatial
 #' contingency matrix, a parameter \code{beta}, and a size variable vector.
 #'
-#' @param spMat spatial contingency matrix for population units, it should be a \code{NxN}
-#'          matrix of 1's (adjacent units) or 0's (otherwise)
-#' @param X size measure vector
-#' @param n integer representing sample size
+#' @param spMat a matrix representing spatial contingency among population units,
+#'         with dimension \code{NxN} and whose values are 1's (adjacent units) or 0's (otherwisex)
+#' @param X numeric vector with values of the size variable
+#' @param n integer scalar representing sample size
 #' @param beta a real number <1 representing a modifier of the probability of
 #'             selection for units that are adjacent to already selected units
 #'
-#' @return a vector indicating which units have been selected (1=selected, 0 otherwise)
+#' @return a logical vector indicating which units have been selected
+#'         (TRUE if selected, FALSE otherwise)
 #'
 #' @export
 
 
+
+
 fpdustPPS <- function(spMat,X,n,beta){
+
+
+    ## Check input
+    if(!is.matrix(spMat)) stop("Argument spMat should be anobject of class matrix!")
+    if(ncol(spMat) != nrow(spMat)) stop("spMat should be a square matrix!")
+    if( !is.atomic(n)) stop("Argument n must be a numeric scalar")
+    if( !is.numeric(n) ) stop("Argument n must be numeric!")
+    if( n<2) stop("The sample size n should be >=2")
+    if( beta>1) stop("The parameter beta should be <1")
+    if( !is.numeric(X) | !is.vector(X) ) stop("Argument X should be a numeric vector!")
+
+
     if(beta < 0) stop('beta should assume a value greater or equal to 0')
     n <- floor(n)
     N <- length(X)

@@ -10,7 +10,13 @@ spatialContMat(clist)
 \item{clist}{list of length N in which each element is a vector of id's continguous units}
 }
 \description{
-Given a \code{list} of contingencies for each unit in a population of size \code{N},
-\code{scmat} creates a matrix of local contingency matrix of size \code{NxN}
-of 1's (if units i and j are contiguous) and 0's (otherwise).
+Create a matrix of local contingency matrix of size \code{NxN} starting from
+a list.
+}
+\details{
+The input argument \code{clist} should be a list of lenght N. Each element of
+this list must be a numeric vector, including the indices of the units that
+are contiguous to the unit corresponding to the list element.
+Function \code{spatialContingency} returns a matrix whose values are 1's (contiguous units)
+and 0's (non-contiguous units).
 }
