@@ -25,3 +25,18 @@ a logical vector indicating which units have been selected
 \code{fpdustPPS} selects a sample of size n from a finite population given a spatial
 contingency matrix, a parameter \code{beta}, and a size variable vector.
 }
+\examples{
+# List of contiguous units ---
+cl <- list( c(2, 3), c(1,4), c(1,6), c(2,6), NULL, c(3,4))
+# Generate spatial contingency matrix ---
+cm <- spatialContingencyMatrix(cl)
+
+### Draw a FPDUST sample ---
+fpdust(cm, n= 2, beta=0.5)
+
+### Draw a PPS FPDUST sample ---
+X <- rgamma(6, 20)
+fpdustPPS(cm, X, n= 2, beta=0.5)
+
+
+}

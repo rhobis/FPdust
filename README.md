@@ -24,8 +24,29 @@ install.packages("devtools")
 devtools::install_github("rhobis/fpdust")
 ```
 
+Usage
+-----
+
+``` r
+library(fpdust)
+
+# List of contiguous units ---
+cl <- list( c(2, 3), c(1,4), c(1,6), c(2,6), NULL, c(3,4))
+# Generate spatial contingency matrix ---
+cm <- spatialContingencyMatrix(cl)
+
+### Draw a FPDUST sample ---
+fpdust(cm, n= 2, beta=0.5)
+
+### Draw a PPS FPDUST sample ---
+X <- rgamma(6, 20)
+fpdustPPS(cm, X, n= 2, beta=0.5)
+
+```
+
+
 More
 ----
 
-- Please, report any bug or issue [here](https://github.com/rhobis/robustHT/issues).
+- Please, report any bug or issue [here](https://github.com/rhobis/fpdust/issues).
 - For more information, please contact the manteiner at `roberto.sichera@unipa.it`. 

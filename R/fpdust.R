@@ -12,6 +12,18 @@
 #' @return a logical vector indicating which units have been selected
 #'         (TRUE if selected, FALSE otherwise)
 #'
+#'
+#' @examples
+#' # List of contiguous units ---
+#' cl <- list( c(2, 3), c(1,4), c(1,6), c(2,6), NULL, c(3,4))
+#' # Generate spatial contingency matrix ---
+#' cm <- spatialContingencyMatrix(cl)
+#'
+#' ### Draw a FPDUST sample ---
+#' fpdust(cm, n= 2, beta=0.5)
+#'
+#'
+#'
 #' @export
 
 

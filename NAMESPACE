@@ -2,4 +2,4 @@
 
 export(fpdust)
 export(fpdustPPS)
-export(spatialContMat)
+export(spatialContingencyMatrix)
