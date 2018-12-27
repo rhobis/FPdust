@@ -1,4 +1,4 @@
-fpdust
+FPdust
 ======================================================
 
 [![Travis-CI Build Status](https://travis-ci.org/rhobis/UPSvarApprox.svg?branch=master)](https://travis-ci.org/rhobis/UPSvarApprox)
@@ -6,10 +6,12 @@ fpdust
 
 Description 
 -----------------
-fpdust implements the FPDUST (Fattorini and Ridolfi, 1997) and PPS FPDUST (Barabesi et al. ,1997) Spatial Sampling Designs 
-for Finite Populations. These designs draw a sample of spatial units by reducing, after each draw, the selection probability of 
-units that are adjacent to any unit that have already been sampled. The PPS FPDUST sampling is a probability-proportional-to-size
-sampling obtained by including a size variable in FPDUST sampling.
+FPdust implements the FPDUST (Fattorini and Ridolfi, 1997) and PPS FPDUST (Barabesi et al., 1997) 
+spatial sampling designs for Finite Populations. 
+These designs draw a sample of spatial units by reducing, after each draw, 
+the selection probability of units that are adjacent to any unit that have already 
+been sampled. The PPS FPDUST sampling is a probability-proportional-to-size
+sampling obtained by including a size variable in the FPDUST sampling.
 
 
 
