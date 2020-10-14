@@ -1,8 +1,8 @@
 Package: fpdust
 Title: An Implementation of the FPDUST and PPS FPDUST Spatial Sampling Designs for Finite Populations
-Version: 0.0.1
-Date: 2018-11-20
-Authors@R: person("Roberto", "Sichera", email = "roberto.sichera@unipa.it", role = c("aut", "cre"))
+Version: 0.0.2
+Date: 2020-10-14
+Authors@R: person("Roberto", "Sichera", email = "rob.sichera@gmail.com", role = c("aut", "cre"))
 Description: Draw probabilistic samples with fixed size through FPDUST (Fattorini and Ridolfi, 1997) or PPS FPDUST sampling design (Barabesi et al. ,1997).
 Depends: R (>= 3.4.0)
 License: GPL-3
