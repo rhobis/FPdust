@@ -1,10 +1,6 @@
 FPdust
 ======================================================
 
-[![Build Status](https://travis-ci.com/rhobis/FPdust.svg?branch=master)](https://travis-ci.com/rhobis/FPdust)
-[![R badge](https://img.shields.io/badge/-Support%20me-brightgreen)](https://www.buymeacoffee.com/rhobis)
-
-
 Description 
 -----------------
 FPdust implements the FPDUST (Fattorini and Ridolfi, 1997) and PPS FPDUST (Barabesi et al., 1997) 
